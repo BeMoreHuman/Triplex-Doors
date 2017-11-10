@@ -1,0 +1,21 @@
+@import "fonts";
+@import "libs";
+@import "_vars";
+@import "_mixins";
+
+body {
+	background: $main;
+	font-family: 'GothamProBoldItalic';
+	font-size: 32px;
+	text-align: center;
+	padding-top: 150px;
+	color: $accent;
+}
+
+.test {
+	cursor: pointer;
+	transition: all 1s ease;
+	&:hover {
+		color: $hov;
+	}
+}
