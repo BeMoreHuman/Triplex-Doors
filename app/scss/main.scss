@@ -222,7 +222,7 @@ body {
 
 .some__doors {
 	width: 65%;
-	background-image: url("/img/bg_1.jpg");
+	background-image: url("../img/bg_1.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: relative;
@@ -275,7 +275,7 @@ body {
 
 	&:after {
 		content: "";
-		background-image: url("/img/arrow.png");
+		background-image: url("../img/arrow.png");
 		background-repeat: no-repeat;
 		background-size: cover;
 		position: absolute;
@@ -587,7 +587,7 @@ body {
 
 	&:after {
 		content: "";
-		background-image: url("/img/arrow_2.png");
+		background-image: url("../img/arrow_2.png");
 		background-repeat: no-repeat;
 		background-size: cover;
 		position: absolute;
@@ -762,7 +762,7 @@ body {
 .footer__map {
 	width: 270px;
 	height: 255px;
-	background-image: url('/img/map.jpg');
+	background-image: url('../img/map.jpg');
 	background-position: center;
 	background-size: auto;
 }
