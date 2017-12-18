@@ -3,19 +3,789 @@
 @import "_vars";
 @import "_mixins";
 
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+input {
+	font-style: none;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	margin: 0;
+	padding: 0;
+}
+
 body {
-	background: $main;
-	font-family: 'GothamProBoldItalic';
-	font-size: 32px;
-	text-align: center;
-	padding-top: 150px;
-	color: $accent;
+	font-family: "GothamProLight";
+	font-size: 16px;
+	color: $grey;
+	height: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex: 0 0 auto;
+}
+
+.header {
+	background: $dark;
+	position: relative;
+}
+
+.header__top {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	margin-top: 45px;
+}
+
+.logo__img {
+	width: 117px;
+	height: 41px;
+	fill: $main;
+}
+
+.advantage__list {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	align-items: center;
+	font-size: 12px;
+}
+
+.advantage__item {
+	margin: 0 10px;
+}
+
+.advantage__link {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.advantage__icon-pic {
+	width: 16px;
+	height: 16px;
+	fill: $main;
+}
+
+.advantage__text {
+	color: $main;
+	margin-left: 10px;
+}
+
+.contacts {
+	color: #fff;
+}
+
+.phone__number-bold {
+	font-family: "GothamProBold";
+	font-size: 24px;
+}
+
+.header__bottom {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 45px;
+	margin-bottom: 20px;
+}
+
+.menu__list {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+
+.menu__item {
+	margin: 0 20px;
+
+	&:first-child {
+		margin-left: 0;
+	}
+}
+
+.menu__link {
+	color: $grey;
+	padding-bottom: 5px;
+	border-bottom: 1px solid $grey;
+	text-transform: uppercase;
+	transition: .3s all ease;
+
+	&:hover {
+		color: #fff;
+		text-decoration: none;
+		border-bottom: 1px solid $main;
+	}
+}
+
+.search {
+	position: relative;
+	width: 270px;
+}
+
+.search__input {
+	width: 100%;
+	position: relative;
+	padding: 0;
+	border: 0;
+	background: none;
+	padding-bottom: 5px;
+	padding-right: 15px;
+	border-bottom: 1px solid $grey;
+	font-size: 12px;
+	font-family: "GothamProLight";
+	transition: .3s all ease;
+
+	&:focus::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+		color: #fff;
+	}
+	&:focus::-moz-placeholder { /* Firefox 19+ */
+		color: #fff;
+	}
+	&:focus:-ms-input-placeholder { /* IE 10+ */
+		color: #fff;
+	}
+	&:focus:-moz-placeholder { /* Firefox 18- */
+		color: #fff;
+	}
+
+	&:focus {
+		color: #fff;
+		border-bottom: 1px solid #fff;
+		outline: none;
+	}
+}
+
+.search__icon-img {
+	fill: $main;
+	width: 12px;
+	height: 12px;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+/*------------------- section ------------------*/
+
+.section__one {
+	position: relative;
+	height: auto;
+	background: linear-gradient(to bottom, rgba(38,36,35,1) 0%,rgba(38,36,35,1) 20%,rgba(255,255,255,1) 20%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .test {
-	cursor: pointer;
-	transition: all 1s ease;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+}
+
+.some__doors {
+	width: 65%;
+	background-image: url("/img/bg_1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-direction: column;
+	padding-left: 70px;
+	color: $grey;
+	font-size: 20px;
+	font-family: "GothamProLight";
+	padding-bottom: 65px;
+	margin-top: 50px;
+}
+
+.top__line {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 6px;
+	background-color: $main;
+	width: 85%;
+}
+
+.some__doors-title {
+	margin-top: 200px;
+}
+
+.main__title {
+	font-family: "MerriweatherBold";
+	color: #fff;
+	font-size: 36px;
+}
+
+.btn__more {
+	margin-top: 130px;
+	color: #fff;
+	font-size: 16px;
+	font-family: "GothamProLight";
+	background: none;
+	border: none;
+	width: 175px;
+	text-align: right;
+	position: relative;
+	padding: 0;
+	transition: .3s all ease;
+
+	&:after {
+		content: "";
+		background-image: url("/img/arrow.png");
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: absolute;
+		background-position-x: right;
+		top: 50%;
+		left: 0;
+		height: 14px;
+		width: 71px;
+		transform: translateY(-50%);
+		transition: .3s all ease;
+	}
+
 	&:hover {
-		color: $hov;
+		width: 145px;
+		&:after {
+			width: 41px;
+		}
+	}
+}
+
+.new__model {
+	width: 31%;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: $light;
+	margin-top: 50px;
+}
+
+.new__model-title {
+	margin-top: 50px;
+	text-align: center;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.new__model-desc {
+	font-size: 16px;
+	font-family: "GothamProLight";
+	color: $dark;
+}
+
+.model__door {
+	margin-top: 20px;
+	font-family: "GothamProBlack";
+	font-size: 24px;
+
+	&:hover {
+		cursor: pointer;
+		border-bottom: 1px solid transparent;
+	}
+}
+
+.model__door-brown {
+	color: $accent;
+	border-bottom: 1px solid $accent;
+}
+
+.door__photo {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	align-items: flex-start;
+	margin-top: 50px;
+	width: 245px;
+	height: 375px;
+	overflow: hidden;
+}
+
+.door__photo-img {
+	height: auto;
+}
+
+.eco__doors, .glass__doors {
+	width: 48%;
+	background-color: $light;
+	padding: 70px 70px 0;
+	margin-top: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.glass__doors {
+	background-color: $dark;
+}
+
+.eco__doors-title, .glass__doors-title {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.eco__doors-desc, .eco__doors-img, .glass__doors-desc, .glass__doors-img {
+	margin-top: 35px;
+}
+
+.model__door-light {
+	color: $main;
+	border-bottom: 1px solid $main;
+}
+
+.glass__doors-desc {
+	color: #fff;
+}
+
+.eco__doors-img, .glass__doors-img {
+	width: 430px;
+	height: 175px;
+	overflow: hidden;
+	justify-content: flex-end;
+}
+
+/*---------------------section 2 - catalog------------------------*/
+
+.section__catalog {
+	height: auto;
+	position: relative;
+}
+
+.catalog__head {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 140px;
+}
+
+.catalog__title {
+	color: $accent;
+	font-family: "MerriweatherBold";
+	font-size: 36px;
+	position: relative;
+	margin-left: 100px;
+
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		left: -100px;
+		top: 50%;
+		width: 70px;
+		height: 1px;
+		background: $accent;
+	}
+}
+
+.catalog__filter-list {
+	display: flex;
+}
+
+.catalog__filter-item {
+	margin-left: 20px;
+}
+
+.catalog__filter-btn {
+	padding: 18px 17px;
+	border: 1px solid $accent;
+	border-radius: 25px;
+	background: transparent;
+	color: $accent;
+	font-family: 'GothamProLight';
+	outline: none;
+	transition: .5s ease;
+
+	&:hover {
+		border-color: #e0d8d3;
+		color: $dark;
+	}
+
+	&-active {
+		border-color: #e0d8d3;
+		color: $dark;
+	}
+}
+
+.catalog__main {
+	margin-top: 50px;
+}
+
+.catalog__list {
+	display: flex;
+	color: $dark;
+	justify-content: space-between;
+}
+
+.catalog__item {
+	display: flex;
+	flex-direction: column;
+	padding: 40px;
+	background-color: #fbf8f6;
+	width: 24%;
+	transition: .5s ease;
+
+	&:hover {
+		background-color: $dark;
+		color: #fff;
+	}
+
+	&:hover .catalog__item-title {
+		color: #fff;
+	}
+
+	&-active {
+		background-color: $dark;
+		color: #fff;
+
+		& .catalog__item-title {
+			color: #fff;
+		}
+	}
+}
+
+.catalog__item-title {
+	font-family: 'GothamProBlack';
+	font-size: 20px;
+	color: $dark;
+}
+
+.catalog__item-wrap {
+	display: flex;
+	justify-content: flex-start;
+	margin-top: 40px;
+}
+
+.catalog__item-pic {
+	max-width: 100%;
+}
+
+.catalog__item-about {
+	margin-left: 20px;
+}
+
+.catalog__item-about-title, .catalog__item-about--color {
+	color: #b3b0ae;
+}
+
+.catalog__item-desc {
+	font-size: 14px;
+	margin-top: 20px;
+}
+
+.catalog__item-about--color {
+	display: inline-block;
+}
+
+.color__item {
+	width: 13px;
+	height: 13px;
+	border-radius: 100%;
+	border-color: transparent;
+	background-color: none;
+	display: inline-block;
+
+	&--blue {
+		background-color: #2a064b;
+	}
+
+	&--brown {
+		background-color: #4d0909;
+	}
+
+	&--white {
+		background-color: #fff6f6;
+	}
+
+	&--green {
+		background-color: #1d1d1d;
+	}
+
+	&--violet {
+		background-color: #3f0133;
+	}
+
+}
+
+.catalog__item-about--new, .catalog__item-about--hit {
+	color: $accent;
+	text-transform: uppercase;
+	margin-top: 10px;
+	font-size: 12px;
+	font-family: 'MerriweatherLight';
+}
+
+.catalog__item-btn {
+	font-family: 'GothamProLight';
+	color: #fff;
+	background: $main;
+	padding: 20px 30px;
+	border: 1px solid transparent;
+	border-radius: 25px;
+	outline: none;
+	text-align: left;
+	margin-top: 20px;
+	position: relative;
+
+	&:after {
+		content: "";
+		background-image: url("/img/arrow_2.png");
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: absolute;
+		background-position-x: right;
+		top: 50%;
+		right: 10px;
+		height: 14px;
+		width: 25px;
+		transform: translateY(-50%);
+		transition: .3s all ease;
+	}
+
+	&:hover {
+		&:after {
+			width: 35px;
+		}
+	}
+}
+
+/*-------------------------section 3------------------------------*/
+
+.section__company-title {
+	color: $accent;
+	font-family: "MerriweatherBold";
+	font-size: 36px;
+	position: relative;
+	margin-left: 100px;
+	margin-top: 140px;
+	position: relative;
+
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		left: -100px;
+		top: 50%;
+		width: 70px;
+		height: 1px;
+		background: $accent;
+	}
+}
+
+.benefit__list {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 60px;
+}
+
+.benefit__item {
+	position: relative;
+	height: 470px;
+}
+
+.filter {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background: -moz-linear-gradient(top, rgba(38,36,35,0) 0%, rgba(38,36,35,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(38,36,35,0) 0%,rgba(38,36,35,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(38,36,35,0) 0%,rgba(38,36,35,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00262423', endColorstr='#262423',GradientType=0 ); /* IE6-9 */
+}
+
+.benefit__item-img {
+	height: 100%;
+}
+
+.benefit__item-desc {
+	position: absolute;
+	left: 20%;
+	bottom: 20%;
+	width: 190px;
+	color: #fff;
+}
+
+.bold {
+	font-family: 'GothamProBold';
+	color: #ebdcd3;
+}
+
+/*------------------------footer-------------------------------*/
+
+.footer {
+	background-color: $dark;
+	width: 100%;
+	height: 525px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	align-items: center;
+	margin-top: 30px;
+}
+
+.wrap {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	// margin-top: 145px;
+
+}
+
+.block__one, .block__two {
+	width: 25%;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-direction: column;
+}
+
+.block__three {
+	width: 50%;
+}
+
+.block__title {
+	font-family: 'MerriweatherBold';
+	font-size: 20px;
+	color: $main;
+}
+
+.block__list {
+	width: 100%;
+	margin-top: 20px;
+}
+
+.block__item {
+	width: 48%;
+	display: inline-block;
+	margin-top: 20px;
+}
+
+.block__item-link {
+	border-bottom: 1px solid #3c3a39;
+	padding-bottom: 5px;
+	text-decoration: none;
+	font-family: 'GothamProLight';
+	font-size: 16px;
+	color: #aaaaaa;
+	transition: .3s all ease;
+
+	&:hover {
+		text-decoration: none;
+		color: #fff;
+		border-bottom: 1px solid $main;
+	}
+
+	&:focus {
+		text-decoration: none;
+	}
+}
+
+.block__three {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer__map {
+	width: 270px;
+	height: 255px;
+	background-image: url('/img/map.jpg');
+	background-position: center;
+	background-size: auto;
+}
+
+.contacts__title {
+	font-family: 'GothamProLight';
+	font-size: 12px;
+	color: #fff;
+	opacity: .25;
+	margin-bottom: 5px;
+	margin-top: 20px;
+
+	&--top {
+		margin-top: 0;
+	}
+}
+
+.contacts__desc {
+	font-family: 'GothamProLight';
+	font-size: 16px;
+	color: $main;
+
+	&--phone {
+		font-size: 20px;
 	}
 }
